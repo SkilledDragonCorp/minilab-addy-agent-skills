@@ -13,6 +13,7 @@ Featured upstream: [addyosmani/agent-skills](https://github.com/addyosmani/agent
 | `.claude/skills/addy-skills-install-verify/` | Lab skill for install + layout verification |
 | `.claude/skills/lifecycle-gate-run/` | Lab skill for running the gate CLI |
 | CI | `bun test`, skills layout, gitleaks 8.30.1, `bun audit`, Node 24 smoke; separate job for upstream install + e2e |
+| `scripts/report.ts` | `bun run report`: runs `check:skills`, `smoke:node`, lock verify and `bun run gate` per fixture diff → `reports/gate.json` + `gate.md` (steps passed/failed, pins, rows, elapsed ms) |
 
 Upstream skill copies are **not** committed — only the lock snapshot and lab-owned skills under `.claude/skills/`.
 

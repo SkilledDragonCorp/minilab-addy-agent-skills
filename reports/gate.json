@@ -1,0 +1,119 @@
+{
+  "generated_at": "2026-10-13T15:01:36.299Z",
+  "lab": "minilab-addy-agent-skills",
+  "keyless": true,
+  "ok": true,
+  "steps_total": 6,
+  "steps_passed": 6,
+  "steps_failed": 0,
+  "elapsed_ms": 763,
+  "elapsed_s": 0.8,
+  "skills": {
+    "upstream_repo": "addyosmani/agent-skills",
+    "cli": "skills@1.7.2",
+    "agent": "claude-code",
+    "pinned": 2,
+    "pinned_names": [
+      "code-review-and-quality",
+      "test-driven-development"
+    ],
+    "pinned_verified": 2,
+    "lock_match": true,
+    "lock_note": "installed skills-lock.json matches fixtures/expected-skills-lock.json",
+    "local": 2,
+    "local_names": [
+      "addy-skills-install-verify",
+      "lifecycle-gate-run"
+    ],
+    "frontmatter_ok": 2
+  },
+  "gate": {
+    "skill": "code-review-and-quality",
+    "skill_path": ".throwaway-skills/.claude/skills/code-review-and-quality/SKILL.md",
+    "diffs": 3,
+    "runs_passed": 3,
+    "checklist_entries": 25,
+    "elapsed_ms": 190,
+    "runs": [
+      {
+        "diff": "dependency-bump.patch",
+        "ok": true,
+        "entries": 10,
+        "summary": "2 file(s), dependencies",
+        "elapsed_ms": 59
+      },
+      {
+        "diff": "docs-only.patch",
+        "ok": true,
+        "entries": 0,
+        "summary": "1 file(s), documentation only",
+        "elapsed_ms": 62
+      },
+      {
+        "diff": "feature-without-tests.patch",
+        "ok": true,
+        "entries": 15,
+        "summary": "1 file(s), source",
+        "elapsed_ms": 69
+      }
+    ]
+  },
+  "node": {
+    "smoke_ok": true,
+    "version": "v24.14.1",
+    "bun": "1.4.2"
+  },
+  "steps": [
+    {
+      "id": "check:skills",
+      "command": "bun run check:skills",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 106
+    },
+    {
+      "id": "smoke:node",
+      "command": "bun run smoke:node",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 393
+    },
+    {
+      "id": "verify:lock",
+      "command": "compare skills-lock.json to fixtures/expected-skills-lock.json (in-process)",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 1
+    },
+    {
+      "id": "gate:dependency-bump",
+      "command": "bun run gate -- --skill .throwaway-skills/.claude/skills/code-review-and-quality/SKILL.md --diff fixtures/diffs/dependency-bump.patch",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 59
+    },
+    {
+      "id": "gate:docs-only",
+      "command": "bun run gate -- --skill .throwaway-skills/.claude/skills/code-review-and-quality/SKILL.md --diff fixtures/diffs/docs-only.patch",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 62
+    },
+    {
+      "id": "gate:feature-without-tests",
+      "command": "bun run gate -- --skill .throwaway-skills/.claude/skills/code-review-and-quality/SKILL.md --diff fixtures/diffs/feature-without-tests.patch",
+      "ok": true,
+      "exit_code": 0,
+      "elapsed_ms": 69
+    }
+  ],
+  "failures": [],
+  "headline": {
+    "skills_pinned": 2,
+    "steps_passed": 6,
+    "steps_total": 6,
+    "seconds": 0.8,
+    "checklist_entries": 25,
+    "local_skills": 2
+  }
+}

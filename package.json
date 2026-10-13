@@ -13,7 +13,8 @@
     "check:skills": "bun run scripts/check-skills-frontmatter.ts",
     "gate": "bun run scripts/run-lifecycle-gate.ts",
     "audit": "bun audit",
-    "smoke:node": "bash scripts/node-smoke.sh"
+    "smoke:node": "bash scripts/node-smoke.sh",
+    "report": "bun run scripts/report.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
