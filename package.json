@@ -1,0 +1,22 @@
+{
+  "name": "@skilleddragon/minilab-addy-agent-skills",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SkilledDragon minilab: install Addy Osmani agent-skills, verify layout, lifecycle gate on PR diffs",
+  "engines": {
+    "node": ">=24.0.0",
+    "bun": ">=1.2.0"
+  },
+  "scripts": {
+    "test": "bun test",
+    "check:skills": "bun run scripts/check-skills-frontmatter.ts",
+    "gate": "bun run scripts/run-lifecycle-gate.ts",
+    "audit": "bun audit",
+    "smoke:node": "bash scripts/node-smoke.sh"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.8.3"
+  }
+}

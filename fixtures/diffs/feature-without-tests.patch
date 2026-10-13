@@ -1,0 +1,14 @@
+diff --git a/src/cart/total.ts b/src/cart/total.ts
+new file mode 100644
+index 0000000..3333333
+--- /dev/null
++++ b/src/cart/total.ts
+@@ -0,0 +1,8 @@
++export function cartTotal(items: { price: number; qty: number }[]): number {
++  return items.reduce((sum, item) => sum + item.price * item.qty, 0);
++}
++
++export function applyDiscount(total: number, pct: number): number {
++  if (pct < 0 || pct > 100) throw new Error("invalid discount");
++  return total * (1 - pct / 100);
++}

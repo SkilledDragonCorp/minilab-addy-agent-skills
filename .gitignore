@@ -1,0 +1,39 @@
+# Secrets and local env
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets/
+
+# Dependencies and build
+node_modules/
+dist/
+build/
+*.tsbuildinfo
+bun.lockb
+
+# Throwaway upstream skill installs (never commit)
+.upstream-skills-workspace/
+.throwaway-skills/
+
+# Caches and logs
+.cache/
+.tmp/
+tmp/
+logs/
+*.log
+
+# Coverage
+coverage/
+
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+
+# Gitleaks local binary
+tools/gitleaks
+gitleaks
+gitleaks.tar.gz

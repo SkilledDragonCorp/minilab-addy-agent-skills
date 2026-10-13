@@ -1,0 +1,19 @@
+diff --git a/package.json b/package.json
+index 4444444..5555555 100644
+--- a/package.json
++++ b/package.json
+@@ -10,7 +10,7 @@
+   "dependencies": {
+-    "lodash": "4.17.21"
++    "lodash": "4.17.23"
+   }
+ }
+diff --git a/bun.lock b/bun.lock
+index 6666666..7777777 100644
+--- a/bun.lock
++++ b/bun.lock
+@@ -1,3 +1,3 @@
+ {
+-  "lockfileVersion": 1
++  "lockfileVersion": 1
+ }
